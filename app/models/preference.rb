@@ -1,0 +1,2 @@
+class Preference < ApplicationController
+end
