@@ -7,7 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootsnap'
-gem 'sassc'
+gem 'sassc', '~> 2.1.0'
 gem "actionview", ">= 5.0.7.2"
 
 group :development, :test do
@@ -20,4 +20,3 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
 end
-
