@@ -1,4 +1,4 @@
-# Namespaced Routes Lab
+# Namespaced Routes Lab 
 
 ## Objectives
 
