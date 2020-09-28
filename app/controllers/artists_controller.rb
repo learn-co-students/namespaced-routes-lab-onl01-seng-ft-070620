@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
@@ -8,7 +10,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    @preference = Preference.first
+    if @preference.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
@@ -40,7 +47,7 @@ class ArtistsController < ApplicationController
   def destroy
     @artist = Artist.find(params[:id])
     @artist.destroy
-    flash[:notice] = "Artist deleted."
+    flash[:notice] = 'Artist deleted.'
     redirect_to artists_path
   end
 
